@@ -1,0 +1,9 @@
+# acknowledgments
+
+Kudos to Manning for giving me the chance to write this book and letting me have a lot of creative freedom with it. Thanks to publisher Marian Bace, Mike Stephens for getting me on board, Bert Bates for teaching me how to write, and Jennifer Stout for being an incredibly responsive and helpful editor. Thanks also to the people on Manning's production team: Kevin Sullivan, Mary Piergies, Tiffany Taylor, Leslie Haimes, and all the others behind the scenes. In addition, I want to thank the many people who read the manuscript and offered suggestions: Karen Bensdon, Rob Green, Michael Hamrah, Ozren Harlovic, Colin Hastie, Christopher Haupt, Chuck Henderson, Pawel Kozlowski, Amit Lamba, Jean-François Morin, Robert Morrison, Sankar Ramanathan, Sander Rossel, Doug Sparling, and Damien White
+
+Thanks to the people who helped me reach this point: the folks on the Flaskhit game board, for teaching me how to code, the many friends who helped by reviewing chapters, giving advice, and letting me try out different explanations, including Ben Vinegar, Karl Puzon, Alex Manning, Esther Chan, Anish Bhatt, Michael Glass, Nikrad Mahdi, Charles Lee, Jared Friedman, Hema Manickavasagam, Hari Raja, Murali Gudipati, Srinivas Varadan, and others; and Gerry Brady, for teaching me algorithms. Another big thank you to algorithms academics like CLRS, Knuth, and Strang. I'm truly standing on the shoulders of giants.
+
+Dad, Mom, Priyanka, and the rest of the family: thank you for your constant support. And a big thank you to my wife Maggie There are many adventures ahead of us, and some of them don't involve staying inside on a Friday night rewriting paragraphs.
+
+Finally, a big thank you to all the readers who took a chance on this book, and the readers who gave me feedback in the book's forum. You really helped make this book better
