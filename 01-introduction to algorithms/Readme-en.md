@@ -30,9 +30,9 @@ The good news is, an implementation of every algorithm in this book is probably 
 
 You'll learn techniques for solving problems that might have been out of your grasp until now. For example:
 
-- If you like making video games, you can write an Al system that
+- If you like making video games, you can write an Al system thatfollows the user around using graph algorithms. 
 
-- follows the user around using graph algorithms. You'll learn to make a recommendations system using k-nearest neighbors
+- You'll learn to make a recommendations system using k-nearest neighbors
 
 - Some problems aren't solvable in a timely manner! The part of this book that talks about NP-complete problems shows you how to identify those problems and come up with an algorithm that gives you an approximate answer
 
