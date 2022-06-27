@@ -256,7 +256,7 @@ Suppose you’re using simple search to look for a person in the phone book. You
 
 Simple search still takes O(n) time. In this case, you found what you were looking for instantly. That’s the best-case scenario. But Big O notation is about the worst-case scenario. So you can say that, in the worst case, you’ll have to look at every entry in the phone book once. That’s O(n) time. It’s a reassurance—you know that simple search will never be slower than O(n) time. 
 
->Note
+>### Note
 >Along with the worst-case run time, it’s also important to look at the average-case run time. Worst case versus average case is discussed in chapter 4. 
 
 ### Some common Big O run times 
