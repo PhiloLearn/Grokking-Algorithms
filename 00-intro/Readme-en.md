@@ -1,3 +1,21 @@
+# preface
+
+I first got into programming as a hobby Visual Basic 6 for Dummies taught me the basics, and I kept reading books to learn more. But the subject of algorithms was impenetrable for me. I remember savoring the table of contents of my first algorithms book, thinking "I'm finally going to understand these topics!" But it was dense stuff, and I gave up after a few weeks. It wasn't until I had my first good algorithms professor that I realized how simple and elegant these ideas were.
+
+A few years ago, I wrote my first illustrated blog post. I'm a visual learner, and I really liked the illustrated style. Since then, I've written a few illustrated posts on functional programming, Git, machine learning, and concurrency. By the way I was a mediocre writer when I started out. Explaining technical concepts is hard. Coming up with good examples takes time, and explaining a difficult concept takes time So it's easiest to gloss over the hard stuff I thought I was doing a pretty good job, until after one of my posts got popular, a coworker came up to me and said, "I read your post and I still don't understand this." I still had a lot to learn about writing
+
+Somewhere in the middle of writing these blog posts, Manning reached out to me and asked if I wanted to write an illustrated book. Well, it turns out that Manning editors know a lot about explaining technical concepts, and they taught me how to teach. I wrote this book to scratch a particular itch: I wanted to write a book that explained hard technical topics well, and I wanted an easy-to-read algorithms book. My writing has come a long way since that first blog post, and I hope you find this book an easy and informative read.
+
+# acknowledgments
+
+Kudos to Manning for giving me the chance to write this book and letting me have a lot of creative freedom with it. Thanks to publisher Marian Bace, Mike Stephens for getting me on board, Bert Bates for teaching me how to write, and Jennifer Stout for being an incredibly responsive and helpful editor. Thanks also to the people on Manning's production team: Kevin Sullivan, Mary Piergies, Tiffany Taylor, Leslie Haimes, and all the others behind the scenes. In addition, I want to thank the many people who read the manuscript and offered suggestions: Karen Bensdon, Rob Green, Michael Hamrah, Ozren Harlovic, Colin Hastie, Christopher Haupt, Chuck Henderson, Pawel Kozlowski, Amit Lamba, Jean-François Morin, Robert Morrison, Sankar Ramanathan, Sander Rossel, Doug Sparling, and Damien White
+
+Thanks to the people who helped me reach this point: the folks on the Flaskhit game board, for teaching me how to code, the many friends who helped by reviewing chapters, giving advice, and letting me try out different explanations, including Ben Vinegar, Karl Puzon, Alex Manning, Esther Chan, Anish Bhatt, Michael Glass, Nikrad Mahdi, Charles Lee, Jared Friedman, Hema Manickavasagam, Hari Raja, Murali Gudipati, Srinivas Varadan, and others; and Gerry Brady, for teaching me algorithms. Another big thank you to algorithms academics like CLRS, Knuth, and Strang. I'm truly standing on the shoulders of giants.
+
+Dad, Mom, Priyanka, and the rest of the family: thank you for your constant support. And a big thank you to my wife Maggie There are many adventures ahead of us, and some of them don't involve staying inside on a Friday night rewriting paragraphs.
+
+Finally, a big thank you to all the readers who took a chance on this book, and the readers who gave me feedback in the book's forum. You really helped make this book better
+
 about this book
 
 This book is designed to be easy to follow I avoid big leaps of thought. Any time a new concept is introduced, I explain it right away or tell you when I'll explain it Core concepts are reinforced with exercises and multiple explanations so that you can check your assumptions and make sure you're following along
