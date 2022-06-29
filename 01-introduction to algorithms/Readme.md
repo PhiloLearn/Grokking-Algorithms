@@ -131,10 +131,12 @@
 تابع «جستجوی_دودویی» یک آرایه مرتب شده و یک آیتم می گیرد. اگر مورد در آرایه باشد، تابع موقعیت خود را برمی‌گرداند. شما ردیابی خواهید کرد که چه بخشی از آرایه را باید جستجو کنید. در ابتدا، این کل آرایه است:
 
 <div dir="ltr">
+
 ```python
 low = 0
 high = len(list) - 1
 ```
+
 </div>
 
 ![binary_search_10](../images/01/binary_search_10.jpg)
@@ -146,11 +148,13 @@ high = len(list) - 1
 اگر حدس خیلی کم است، بر این اساس کم را به روز می کنید:
 
 <div dir="ltr">
+
 ```python
 if
     guess < item:
     low = mid + 1
 ```
+
 </div>
 
 ![binary_search_12](../images/01/binary_search_12.jpg)
