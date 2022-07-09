@@ -89,3 +89,145 @@ Simple math tells you: it’s 04. Arrays are great if you want to read random el
 ### Terminology 
 
 The elements in an array are numbered. This numbering starts from 0, not 1. For example, in this array, 20 is at position 1. 
+
+![chapter_2_11](../images/02/chapter_02_11.jpg)
+
+
+And 10 is at position 0. This usually throws new programmers for a spin. Starting at 0 makes all kinds of array-based code easier to write, so programmers have stuck with it. Almost every programming language you use will number array elements starting at 0. You’ll soon get used to it. 
+The position of an element is called its index. So instead of saying, “20 is at position 1,” the correct terminology is, “20 is at index 1.” I’ll use index to mean position throughout this book. 
+Here are the run times for common operations on arrays and lists.
+
+![chapter_2_12](../images/02/chapter_02_12.jpg)
+
+Question: Why does it take O(n) time to insert an element into an array? Suppose you wanted to insert an element at the beginning of an array. How would you do it? How long would it take? Find the answers to these questions in the next section! 
+
+## Exercise 
+
+2.1 
+Suppose you’re building an app to keep track of your finances.
+
+![chapter_2_13](../images/02/chapter_02_13.jpg)
+
+Every day, you write down everything you spent money on. At the end of the month, you review your expenses and sum up how much you spent. So, you have lots of inserts and a few reads. Should you use an array or a list? 
+
+## Inserting into the middle of a list 
+
+
+Suppose you want your todo list to work more like a calendar. Earlier, you were adding things to the end of the list.
+Now you want to add them in the order in which they should be done.
+
+![chapter_2_14](../images/02/chapter_02_14.jpg)
+
+What’s better if you want to insert elements in the middle: arrays or lists? With lists, it’s as easy as changing what the previous element points to. 
+
+![chapter_2_15](../images/02/chapter_02_15.jpg)
+
+But for arrays, you have to shift all the rest of the elements down.
+
+![chapter_2_16](../images/02/chapter_02_16.jpg)
+
+And if there’s no space, you might have to copy everything to a new location! Lists are better if you want to insert elements into the middle. 
+
+## Deletions 
+
+What if you want to delete an element? Again, lists are better, because you just need to change what the previous element points to. With arrays, everything needs to be moved up when you delete an element. 
+Unlike insertions, deletions will always work. Insertions can fail sometimes when there’s no space left in memory. But you can always delete an element. 
+Here are the run times for common operations on arrays and linked lists.
+
+![chapter_2_17](../images/02/chapter_02_17.jpg)
+
+t’s worth mentioning that insertions and deletions are O(1) time only if you can instantly access the element to be deleted. It’s a common practice to keep track of the first and last items in a linked list, so it would take only O(1) time to delete those. 
+Which are used more: arrays or lists? Obviously, it depends on the use case. But arrays see a lot of use because they allow random access. There are two different types of access: random access and sequential access. Sequential access means reading the elements one by one, starting at the first element. Linked lists can only do sequential access. If you want to read the 10th element of a linked list, you have to read the first 9 elements and follow the links to the 10th element. Random access means you can jump directly to the 10th element. You’ll frequently hear me say that arrays are faster at reads. This is because they provide random access. A lot of use cases require random access, so arrays are used a lot. Arrays and lists are used to implement other data structures, too (coming up later in the book). 
+
+## Exercises 
+
+2.2 
+Suppose you’re building an app for restaurants to take customer orders. Your app needs to store a list of orders. Servers keep adding orders to this list, and chefs take orders off the list and make them. It’s an order queue: servers add orders to the back of the queue, and the chef takes the first order off the queue and cooks it. 
+
+![chapter_2_18](../images/02/chapter_02_18.jpg)
+
+Would you use an array or a linked list to implement this queue? (Hint: Linked lists are good for inserts/deletes, and arrays are good for random access. Which one are you going to be doing here?) 
+
+
+2.3 
+Let’s run a thought experiment. Suppose Facebook keeps a list of usernames. When someone tries to log in to Facebook, a search is done for their username. If their name is in the list of usernames, they can log in. People log in to Facebook pretty often, so there are a lot of searches through this list of usernames. Suppose Facebook uses binary search to search the list. Binary search needs random access—you need to be able to get to the middle of the list of usernames instantly. Knowing this, would you implement the list as an array or a linked list? 
+
+
+2.4 
+People sign up for Facebook pretty often, too. Suppose you decided to use an array to store the list of users. What are the downsides of an array for inserts? In particular, suppose you’re using binary search to search for logins. What happens when you add new users to an array? 
+
+
+2.5 
+In reality, Facebook uses neither an array nor a linked list to store user information. Let’s consider a hybrid data structure: an array of linked lists. You have an array with 26 slots. Each slot points to a linked list. For example, the first slot in the array points to a linked list containing all the usernames starting with a. The second slot points to a linked list containing all the usernames starting with b, and so on. 
+
+![chapter_2_19](../images/02/chapter_02_19.jpg)
+
+Suppose Adit B signs up for Facebook, and you want to add them to the list. You go to slot 1 in the array, go to the linked list for slot 1, and add Adit B at the end. Now, suppose you want to search for Zakhir H. You go to slot 26, which points to a linked list of all the Z names. Then you search through that list to find Zakhir H. 
+Compare this hybrid data structure to arrays and linked lists. Is it slower or faster than each for searching and inserting? You don’t have to give Big O run times, just whether the new data structure would be faster or slower. 
+
+## Selection sort 
+
+Let’s put it all together to learn your second algorithm: selection sort. To follow this section, you need to understand arrays and lists, as well as Big O notation. 
+
+![chapter_2_20](../images/02/chapter_02_20.jpg)
+
+Suppose you have a bunch of music on your computer. For each artist, you have a play count.
+
+![chapter_2_21](../images/02/chapter_02_21.jpg)
+
+You want to sort this list from most to least played, so that you can rank your favorite artists. How can you do it?
+One way is to go through the list and find the most-played artist. Add that artist to a new list.
+
+![chapter_2_22](../images/02/chapter_02_22.jpg)
+
+Do it again to find the next-most-played artist.
+
+![chapter_2_23](../images/02/chapter_02_23.jpg)
+
+Keep doing this, and you’ll end up with a sorted list.
+
+![chapter_2_24](../images/02/chapter_02_24.jpg)
+
+Let’s put on our computer science hats and see how long this will take to run. Remember that O(n) time means you touch every element in a list once. For example, running simple search over the list of artists means looking at each artist once. 
+
+![chapter_2_25](../images/02/chapter_02_25.jpg)
+
+To find the artist with the highest play count, you have to check each item in the list. This takes O(n) time, as you just saw. So you have an operation that takes O(n) time, and you have to do that n times: 
+
+![chapter_2_26](../images/02/chapter_02_26.jpg)
+
+This takes O(n × n) time or O(n2) time. 
+Sorting algorithms are very useful. Now you can sort
+
+- Names in a phone book 
+- Travel dates 
+- Emails (newest to oldest) 
+
+>Checking fewer elements each time 
+>Maybe you’re wondering: as you go through the operations, the number of elements you have to check keeps decreasing. Eventually, you’re down to having to check just one element. So how can the run time still be O(n2)? That’s a good question, and the answer has to do with constants in Big O notation. I’ll get into this more in chapter 4, but here’s the gist. 
+>You’re right that you don’t have to check a list of n elements each time. You check n elements, then n – 1, n - 2 ... 2, 1. On average, you check a list that has ½ n elements. The runtime is O(n × ½ n). But constants like ½ are ignored in Big O notation (again, see chapter 4 for the full discussion), so you just write O(n × n) or O(n2). 
+
+Selection sort is a neat algorithm, but it’s not very fast. Quicksort is a faster sorting algorithm that only takes O(n log n) time. It’s coming up in the next chapter! 
+
+## Example Code Listing 
+
+We didn’t show you the code to sort the music list, but following is some code that will do something very similar: sort an array from smallest to largest. Let’s write a function to find the smallest element in an array: 
+
+![chapter_2_27](../images/02/chapter_02_27.jpg)
+
+
+Now you can use this function to write selection sort:
+![chapter_2_28](../images/02/chapter_02_28.jpg)
+
+![chapter_2_29](../images/02/chapter_02_29.jpg)
+
+
+## Recap 
+
+- Your computer’s memory is like a giant set of drawers. 
+- When you want to store multiple elements, use an array or a list. 
+- With an array, all your elements are stored right next to each other. 
+- With a list, elements are strewn all over, and one element stores the address of the next one. 
+- Arrays allow fast reads. 
+- Linked lists allow fast inserts and deletes. 
+- All elements in the array should be the same type (all ints, all doubles, and so on). 
